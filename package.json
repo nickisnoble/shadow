@@ -1,0 +1,28 @@
+{
+  "name": "shadow",
+  "version": "0.0.0",
+  "description": "A well commented starting point for ghost themes",
+  "main": "index.hbs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickisnoble/shadow.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "ghost",
+    "theme"
+  ],
+  "author": "Nick Noble",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickisnoble/shadow/issues"
+  },
+  "homepage": "https://github.com/nickisnoble/shadow",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^2.2.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-csscomb": "^3.0.0"
+  }
+}
