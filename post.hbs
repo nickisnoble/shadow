@@ -2,6 +2,40 @@
 
 <main role="main">
   
+  <main role="main">
   
+  {{#post}}
+
+    <article role="article">
+
+      <header class="post-header">
+
+        <a href="{{url}}">
+          <h1 class="post-title">{{title}}</h1>
+        </a>
+
+        <aside class="post-meta">
+          <time class="post-date">{{date format='YYYY-MM-DD'}}</time>
+        </aside>
+
+      </header>
+      
+      {{#if image}}
+        <figure class="post-image">
+          {{image}}
+        </figure>
+      {{/if}}
+
+      <section class="post-content">
+        {{content}}
+      </section>
+
+    </article>
+
+    {{> disqus}}
+
+  {{/post}}
+
+</main>
 
 </main>
