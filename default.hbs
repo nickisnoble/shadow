@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  {{!-- Page title --}}
+  <title>{{title}}</title>
+
+  {{!-- IE compatibility --}}
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+  {{!-- Responsive viewport scaling --}}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {{!-- SEO & Open Graph tags --}}
+  <meta name="description" content="{{@blog.description}}">
+  <meta property="og:site_name" content="{{@blog.title}}"/>
+  {{{block "metaTags"}}} {{!-- Grabs extra meta tags from post/page content --}}
+
+  {{!-- If you have favicons, link them here --}}
+
+  {{!-- If you have custom typefaces, load them here --}}
+
+  {{!-- Load main styles --}}
+  <link rel="stylesheet" href="{{asset "css/style.css"}}">
+
+  {{!-- Load in Ghost stuff --}}  
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+  {{!-- Grab analytics from partials --}}
+  {{> analytics}}
+
+
+
+
+
+  {{!-- ALMOST EVERYTHING BELOW THIS POINT SHOWS UP ON SCREEN --}}
+
+
+
+
+
+  {{!-- The main header, which appears on every page --}}
+
+  <header class="site-header">
+    
+    <a href="{{@blog.url}}"> {{!-- Make logo and title link home --}}
+    
+      {{#if @blog.logo}} {{!-- If the blog has a logo --}}
+        <img src="{{@blog.logo}}" alt="{{@blog.title}} Logo" class="site-logo"> {{!-- Show it! --}}
+      {{/if}}
+      
+      {{!-- Blog title --}}
+      <h1 class="site-title">{{@blog.title}}</h1> 
+
+    </a> {{!-- End link --}}
+
+    {{#if @blog.description}} {{!-- If the blog has a description --}}
+      <p class="site-description">{{@blog.description}}</p> {{!-- Show it! --}}
+    {{/if}}
+
+    {{#if @blog.navigation}} {{!-- If the blog has navigation --}}
+      <nav class="site-navigation">{{@blog.navigation}}</nav> {{!-- Show it! --}}
+    {{/if}}
+
+  </header> {{!-- End header --}}
+
+
+
+
+
+
+  {{!-- This is where the page content will be! --}}
+  {{{body}}}
+
+
+  
+
+
+  {{!-- The main footer, which appears on every page --}}
+
+  <footer class="site-footer">
+
+    {{!-- Dynamic copyright outputs the current year and the title of the blog --}}
+    <p class="copyright">&copy;{{date format="YYYY"}} {{@blog.title}}, except where stated otherwise. All rights reserved.</p>
+
+  </footer> {{!-- End footer --}}
+
+
+
+
+  {{!-- Load in jQuery, scripts, and more Ghost stuff. This is invisible. --}}
+  {{ghost_foot}}
+</body>
+</html>
