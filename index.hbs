@@ -13,7 +13,8 @@
         </a>
 
         <aside class="post-meta">
-          <time class="post-date">{{date format='YYYY-MM-DD'}}</time>
+          {{tags}}
+          <p>Written by <a href="{{author.url}}">{{author.name}}</a> on <time class="post-date">{{date format='MMMM DD, YYYY'}}</time></p>
         </aside>
 
       </header>
