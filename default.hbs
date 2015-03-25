@@ -41,7 +41,7 @@
 
 
   {{! The main header, which appears on every page }}
-  <header role="banner" class="site-header{{#if @blog.cover}} backgrounded" style="background-image: url({{@blog.cover}}){{else}}"{{/if}}>
+  <header role="banner" class="site-header{{#if @blog.cover}} backgrounded" style="background-image: url({{@blog.cover}});"{{else}}"{{/if}}>
     
     <div class="container">
       <a href="{{@blog.url}}">
@@ -90,7 +90,7 @@
 
   {{! Vendor scripts}}
   <script src="{{asset "vendor/jquery.fitvids/jquery.fitvids.js"}}"></script>
-  <script src="{{asset "vendor/highlighjs/highlight.pack.js"}}"></script>
+  <script src="{{asset "vendor/highlightjs/highlight.pack.js"}}"></script>
 
   {{! Load theme JS}}
   <script src="{{asset "js/scripts.js"}}"></script>
