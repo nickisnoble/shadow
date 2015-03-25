@@ -16,6 +16,7 @@
   "dependencies": {
     "jquery.fitvids": "git://github.com/davatron5000/FitVids.js#~1.1.0",
     "knife": "~0.3.3",
-    "normalize.css": "~3.0.2"
+    "normalize.css": "~3.0.2",
+    "highlightjs": "~8.4.0"
   }
 }
