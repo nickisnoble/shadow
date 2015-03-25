@@ -1,0 +1,202 @@
+// Typography
+// ============
+
+
+// Basics
+// --------
+
+html{ 
+  @include khtml(); 
+  @media screen and (min-width: $x-large){
+    font-size: 120%;
+  }
+}
+body{ 
+  @include kbody();
+  font-family: $serif;
+  color: $black;
+  font-weight: 300;
+}
+
+p{
+  @include ktype(0,1,1);
+}
+
+a{
+  color: $highlight;
+  text-decoration: none;
+  border-bottom: 2px solid $gray;
+  transition: color 300ms;
+  &:hover, &:focus{
+    border-color: $black;
+  }
+}
+
+
+// Headings
+// ----------
+
+%headings{
+  font-family: $sans;
+  font-weight: 500;
+
+  a &{
+    color: $black;
+    border: none;
+    &:hover{
+      color: $highlight;
+    }
+  }
+}
+
+h1{
+  @extend %headings;
+  @include ktype(6,1,1);
+}
+h2{
+  @extend %headings;
+  @include ktype(5,2,1);
+}
+h3{
+  @extend %headings;
+  @include ktype(4,2,1);
+}
+h4{
+  @extend %headings;
+  @include ktype(3,2,1);
+}
+h5{
+  @extend %headings;
+  @include ktype(1,2,1);
+}
+h6{
+  @extend %headings;
+  @include ktype(0,2,-1);
+}
+
+
+// Lists
+// -------
+
+ul{
+  list-style-type: square;
+}
+
+ol, ul{
+  padding-left: kunit(1);
+  ol, ul{
+    @include ktype(0,0,0);
+  }
+}
+li{
+  @include ktype(0,0,0);
+  margin-top: kunit(1/2);
+}
+
+dt{
+  font-weight: bold;
+}
+dd+dt{
+  margin-top: kunit(1/2);
+}
+
+
+// Quotes
+// --------
+
+blockquote{
+  margin: kunit(2) 0;
+  border-left: kunit(1/4) solid $gray-light;
+  padding-left: kunit(3/4);
+  p{
+    font-weight: 700;
+    @include ktype(2,0,0);
+    + p{
+      margin-top: kunit(1);
+    }
+  }
+}
+
+
+// Code & Preformatted
+// ---------------------
+
+code,
+pre,
+var,
+samp, 
+tt{
+  color: $gray-dark;
+  background: $gray-light;
+  font-family: $monospace;
+  @include ktype(-1,0,0);
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+
+  tab-size: 2;
+  hyphens: none;
+}
+
+code, var, samp, tt{
+  padding: 2px 4px;
+}
+
+pre{
+  padding: kunit(1);
+  margin: kunit(1) kunit(1)*-1;
+  & + &{
+    margin-top: kunit(1/2)*-1;
+  }
+}
+
+
+// Semantics
+// -----------
+
+dfn, cite, em, i{
+  font-style: italic;
+}
+
+address{
+  margin-left: kunit(1);
+}
+
+abbr, acronym{
+  border-bottom: 1px dotted $highlight;
+  cursor: help;
+}
+
+mark, ins{
+  background: #fefe32;
+  text-decoration: none;
+}
+
+s, strike, del{
+  color: $gray;
+}
+
+small{
+  font-family: $sans;
+}
+
+big{
+  font-size: 125%;
+}
+
+kbd{
+  font-family: $sans;
+  display: inline-block;
+  margin-bottom: 0.4em;
+  padding: 1px 8px;
+  border: #ccc 1px solid;
+  color: #242628;
+  text-shadow: #fff 0 1px 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  background: #f4f4f4;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 1px 0 0 #fff inset;
+}

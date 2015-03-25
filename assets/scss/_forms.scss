@@ -1,0 +1,72 @@
+// Forms
+// =======
+
+%form-control{
+  @include ktype(1,0,0);
+  font-family: $sans;
+  padding: kunit(1)/2;
+  border-width: 1px;
+  border-style: solid;
+  transition: border-color 300ms;
+  &:focus, &:active{
+    outline: 0;
+  }
+}
+
+input, textarea{
+  @extend %form-control;
+  border-color: $gray;
+  outline: 0;
+  width: 100%;
+  color: $black;
+  &:hover{
+    border-color: $gray-dark;
+  }
+  &:focus, &:active{
+    outline: 0;
+    border-color: $highlight;
+  }
+  &:disabled{
+    background:$gray-light;
+  }
+}
+
+
+// Buttons
+// ---------
+
+button, .button, [type="submit"], [type="reset"], [type="button"]{
+  @extend %form-control;
+  width: auto;
+  color: $white;
+  background: $gray;
+  font-weight: bold;
+  transition: border-color 300ms, background 300ms;
+  &:hover{
+    border-color: $black-t;
+  }
+  &:focus, &:active{
+    outline: 0;
+    border-color: $black;
+    background:$black;
+  }
+}
+
+[type="submit"], .button-brand{
+  border-color: $highlight;
+  background: $highlight;
+}
+
+[type="reset"], .button-error{
+  border-color: $error;
+  background: $error;
+}
+
+
+// Labels
+// --------
+
+label{
+  @include ktype(0,1,1);
+  display: block;
+}

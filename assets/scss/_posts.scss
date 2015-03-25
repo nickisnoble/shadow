@@ -1,0 +1,23 @@
+.post{
+  margin: kunit(1) 0;
+}
+
+.post-title{
+  margin-top: 0;
+
+  // Fix extra long unbreaking titles like 'antidisestablishmentarianism'
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.post-meta{
+
+}
+
+.post-header{
+
+}
+
+.post-content{
+
+}

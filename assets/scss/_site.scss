@@ -1,0 +1,26 @@
+.site-logo{
+  display: inline-block;
+  margin: kunit(1) auto;
+}
+
+.site-title{
+
+}
+
+.site-description{
+
+}
+
+.site-navigation{
+
+}
+
+.site-footer{
+  background: $gray-dark;
+  display: block;
+  width: 100%;
+  padding: kunit(1) kunit(1);
+  .copyright{
+    @include ktype(0,0,0);
+  }
+}
