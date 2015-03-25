@@ -2,8 +2,6 @@
 
 <main role="main">
   
-  <main role="main">
-  
   {{#post}}
 
     <article role="article">
@@ -32,11 +30,30 @@
 
     </article>
     
+    <aside class="post-author">
+      {{#author}}
+        
+        <h3 class="author-name">About {{name}}</h3>
+        
+        {{#if image}}
+          {{image}}
+        {{/if}}
+
+        {{#if bio}}
+          <p class="author-bio">{{bio}}</p>
+        {{/if}}
+
+        {{#if website}}
+          <p class="author-website">Learn more about {{name}} at {{website}}</p>
+        {{/if}}
+
+        <p><a href="{{url}}">See all articles by {{name}}</a></p>
+      {{/author}}
+    </aside>
+
     {{! Grab Disqus from partials }}
     {{> disqus}}
 
   {{/post}}
-
-</main>
 
 </main>
