@@ -16,6 +16,7 @@ A well commented starting point for [Ghost](http://ghost.org) themes.
 Shadow uses [Grunt.js](http://gruntjs.com/) to process stylesheets, but it can do a lot more. I've set up two commands as a starting point:
 
 **`$ grunt`** - Watches for changes, and then processes on save.
+
 **`$ grunt compile`** - Processes once.
 
 ## Contributing
