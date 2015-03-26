@@ -6,6 +6,7 @@
 .nav{
   list-style:none;
   padding-left:0;
+  font-family: $sans;
   @include cf;
   > li{
     &,

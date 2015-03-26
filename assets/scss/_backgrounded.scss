@@ -6,5 +6,8 @@
   background-position: center center;
   a{
     color: $white;
+    %headings{
+      color: inherit;
+    }
   }
 }
