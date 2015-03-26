@@ -6,27 +6,9 @@
   .post{
   
   }
-  .post-header{
-
-  }
-  .post-content{
-
-  }
-
-  .featured{
+  
+  .featured{ // Added by Ghost if featured
    
   }
-
-  @media screen and (min-width: $small){
-    // styles once we hit ~tablet
-
-  }
-  @media screen and (min-width: $medium){
-    // styles once we hit ~laptop
-
-  }
-  @media screen and (min-width: $large){
-    // styles once we hit ~desktop
-
-  }
+  
 }

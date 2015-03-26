@@ -11,6 +11,7 @@ html{
     font-size: 120%;
   }
 }
+
 body{ 
   @include kbody();
   font-family: $serif;
@@ -36,7 +37,7 @@ a{
 // ----------
 
 %headings{
-  font-family: $sans;w
+  font-family: $sans;
 
   a &{
     color: $black;
@@ -45,6 +46,7 @@ a{
       color: $highlight;
     }
   }
+  
 }
 
 h1{
@@ -75,10 +77,6 @@ h6{
 
 // Lists
 // -------
-
-ul{
-  list-style-type: square;
-}
 
 ol, ul{
   padding-left: kunit(1);
