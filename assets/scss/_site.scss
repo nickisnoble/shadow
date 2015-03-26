@@ -1,3 +1,9 @@
+.site-header{
+  &.backgrounded{
+    // padding-bottom: kunit(1);
+  }
+}
+
 .site-logo{
   display: inline-block;
   margin: kunit(1) auto;
@@ -12,14 +18,21 @@
 }
 
 .site-navigation{
-
+  li{
+    @include ktype(2,1,2);
+    + li{
+      margin-left: kunit(1);
+    }
+  }
 }
 
 .site-footer{
-  background: $gray-dark;
+  color: $white;
+  background-color: $gray;
   display: block;
   width: 100%;
-  padding: kunit(1) kunit(1);
+  padding: kunit(1);
+  margin-top: kunit(1);
   .copyright{
     @include ktype(0,0,0);
   }
