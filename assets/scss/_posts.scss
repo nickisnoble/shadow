@@ -1,0 +1,31 @@
+// Posts
+// =======
+
+.post{ // Class added by Ghost
+  margin: kunit(4) 0;
+
+  img{
+    margin: kunit(1) auto;
+  }
+  
+}
+
+.post-title{
+  margin-top: 0;
+
+  // Fix extra long unbreaking titles like 'antidisestablishmentarianism'
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.post-meta{
+
+}
+
+.post-header{
+
+}
+
+.post-content{
+
+}

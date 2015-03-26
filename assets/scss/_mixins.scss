@@ -1,0 +1,10 @@
+// Mixins
+// ========
+
+@mixin cf{
+  &:after{
+    content:"";
+    display:table;
+    clear:both;
+  }
+}

@@ -1,0 +1,47 @@
+
+// Settings
+// ==========
+
+
+// Color
+// -------
+
+// Brand
+$primary: #3869d7;
+$highlight:   #0076ff;
+$error: #f20;
+
+// Grayscale
+$black:       #121313;
+$gray-dark:   #575a5e;
+$gray:        #aeb4bb;
+$gray-light:  #ddd; 
+$white:       #fff;
+
+// Transparency
+$black-t: rgba(18,19,19,0.55);
+
+
+// Type
+// ------
+
+// Knife (Vertical Rhythm & Modular Scale calculator)
+$body-font-size:    16px;
+$body-line-height:  $perfect-fifth;
+$scale-factor:      $minor-third;
+$ie8compatability:  true;
+$outputrems:        true;
+
+// Fonts
+$sans:  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$serif: Georgia, Times, "Times New Roman", serif;
+$monospace: Consolas, Monaco, 'Andale Mono', monospace;
+
+
+// Breakpoints
+// -------------
+
+$small: 600px;
+$medium: 800px;
+$large: 1200px;
+$x-large: 1600px;

@@ -1,0 +1,30 @@
+// Nav
+// =====
+//
+// Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
+
+.nav{
+  list-style:none;
+  padding-left:0;
+  font-family: $sans;
+  @include cf;
+  > li{
+    &,
+    > a{
+      display:inline-block;
+      zoom:1;
+    }
+  }
+}
+
+// Force a nav to occupy 100% of the available width of its parent. Extends `.nav`
+.nav-fit{
+  display:table;
+  width:100%;
+  > li{
+    display:table-cell;
+    > a{
+      display:block;
+    }
+  }
+}

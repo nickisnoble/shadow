@@ -1,0 +1,13 @@
+table {
+  border-collapse: collapse;
+}
+
+th{
+  background:$gray-light;
+}
+
+td, th {
+  border: 1px solid $gray;
+  padding: kunit(1/2);
+  text-align: left;
+}

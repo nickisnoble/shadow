@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  {{! Page title }}
+  <title>{{meta_title}}</title>
+
+  {{! IE compatibility }}
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+  {{! Responsive viewport scaling }}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {{! SEO & Open Graph tags }}
+  <meta name="description" content="{{meta_description}}">
+  <meta property="og:site_name" content="{{@blog.title}}"/>
+  {{{block "metaTags"}}} {{! Grabs extra meta tags from post/page content }}
+
+  {{! If you have favicons, link them here }}
+
+  {{! If you want custom typefaces, load them here }}
+
+  {{! Load main styles }}
+  <link rel="stylesheet" href="{{asset "css/style.css"}}">
+
+  {{! Vendor styles}}
+  <link rel="stylesheet" href="{{asset "vendor/highlightjs/styles/monokai.css"}}">
+
+  {{! Ghost outputs important style and meta data with this tag }}
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+  {{! Grab analytics from partials }}
+  {{> analytics}}
+
+
+
+  {{! ALMOST EVERYTHING BELOW THIS POINT SHOWS UP ON SCREEN }}
+
+
+  {{! The main header, which appears on every page }}
+  <header role="banner" class="site-header{{#if @blog.cover}} backgrounded" style="background-image: url({{@blog.cover}});"{{else}}"{{/if}}>
+    
+    <div class="container">
+      <a href="{{@blog.url}}">
+      
+        {{#if @blog.logo}}
+          <img src="{{@blog.logo}}" alt="{{@blog.title}} Logo" class="site-logo">
+        {{/if}}
+        
+        <h1 class="site-title">{{@blog.title}}</h1> 
+
+      </a>
+
+      {{#if @blog.description}}
+        <p class="site-description">{{@blog.description}}</p>
+      {{/if}}
+
+      {{#if @blog.navigation}}
+        <nav class="site-navigation">{{navigation}}</nav>
+      {{/if}}
+    </div>
+
+  </header>
+
+  
+  <div class="container">
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+  </div>
+
+  
+  {{! The main footer, which appears on every page }}
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      
+      {{! Dynamic copyright outputs the current year and the title of the blog }}
+      <p class="copyright">&copy;{{date format="YYYY"}} {{@blog.title}}, except where stated otherwise. All rights reserved.</p>
+
+    </div>
+  </footer>
+
+
+  {{! Ghost outputs important scripts and data with this tag }}
+  {{ghost_foot}}
+
+  {{! Vendor scripts}}
+  <script src="{{asset "vendor/jquery.fitvids/jquery.fitvids.js"}}"></script>
+  <script src="{{asset "vendor/highlightjs/highlight.pack.js"}}"></script>
+
+  {{! Load theme JS}}
+  <script src="{{asset "js/scripts.js"}}"></script>
+
+</body>
+</html>

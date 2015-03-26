@@ -1,6 +1,6 @@
 {
   "name": "shadow",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A well commented starting point for ghost themes",
   "main": "index.hbs",
   "repository": {
