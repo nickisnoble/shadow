@@ -26,9 +26,9 @@ p{
 a{
   color: $highlight;
   text-decoration: none;
-  transition: color 300ms;
   &:hover, &:focus{
-    color: darken($highlight, 10%);
+    text-decoration: underline;
+    color: darken($highlight, 20%);
   }
 }
 
@@ -105,8 +105,7 @@ blockquote{
   border-left: kunit(1/4) solid $gray-light;
   padding-left: kunit(3/4);
   p{
-    font-weight: 700;
-    @include ktype(2,0,0);
+    @include ktype(1,0,0);
     + p{
       margin-top: kunit(1);
     }
@@ -122,10 +121,10 @@ pre,
 var,
 samp, 
 tt{
-  color: $gray-dark;
-  background: $gray-light;
+  color: $gray-light;
+  background: #272822;
   font-family: $monospace;
-  @include ktype(-1,0,0);
+  @include ktype(-2,0,0);
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -134,6 +133,8 @@ tt{
 
   tab-size: 2;
   hyphens: none;
+
+  border-radius: 3px;
 }
 
 code, var, samp, tt{
@@ -142,10 +143,6 @@ code, var, samp, tt{
 
 pre{
   padding: kunit(1);
-  margin: kunit(1) kunit(1)*-1;
-  & + &{
-    margin-top: kunit(1/2)*-1;
-  }
 }
 
 
