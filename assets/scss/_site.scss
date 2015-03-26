@@ -27,10 +27,7 @@
 }
 
 .site-footer{
-  color: $white;
-  background-color: $gray;
-  display: block;
-  width: 100%;
+  border-top: 1px solid $gray-light;
   padding: kunit(1);
   margin-top: kunit(1);
   .copyright{

@@ -14,7 +14,7 @@
 
         <aside class="post-meta">
           {{tags}}
-          <p>Written by <a href="{{author.url}}">{{author.name}}</a> on <time class="post-date">{{date format='MMMM DD, YYYY'}}</time></p>
+          <p>Written by {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} on <time class="post-date">{{date format='MMMM DD, YYYY'}}</time></p>
         </aside>
 
       </header>
@@ -37,7 +37,7 @@
         <h3 class="author-name">About {{name}}</h3>
         
         {{#if image}}
-          {{image}}
+          <img src="{{image}}" alt="A picture of {{name}}">
         {{/if}}
 
         {{#if bio}}

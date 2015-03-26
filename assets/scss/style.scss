@@ -7,8 +7,8 @@
 
 // Imports
 // ---------
-@import '../vendor/knife/knife.scss';
-@import '../vendor/normalize.css/normalize.css';
+@import '../vendor/knife/knife.scss';             // Vertical rhythm and modular scale
+@import '../vendor/normalize.css/normalize.css';  // Reset
 
 
 // Precursor
@@ -16,8 +16,8 @@
 //
 // These files reset and establish the tools utilized by the rest of the stylesheet
 
-@import 'mixins';
-@import 'settings';
+@import 'settings'; // START HERE !!! <------------------------------------
+@import 'mixins';   // Custom mixins
 
 
 // Base
@@ -32,16 +32,26 @@
 @import 'tables';
 
 
-
 // Objects
 // ---------
 // 
 // Encapsulated patterns that can be used anywhere.
 
-@import 'grid';
-@import 'nav';
-@import 'media';
-@import 'backgrounded';
+@import 'grid';         // Layout stuff
+@import 'nav';          // Nav abstraction
+@import 'media';        // Media object
+@import 'backgrounded'; // Image backgrounds
+
+
+// Components
+// ============
+//
+// Larger patterns that appear independent of page type
+
+@import 'site';   // Site wide components (header/footer)
+@import 'index';  // Post lists
+@import 'posts';  // Content
+@import 'author'; // Author
 
 
 // Specifics
@@ -49,12 +59,7 @@
 //
 // Details and tweaks for specific locations.
 
-@import 'site';
-@import 'index';
-@import 'posts';
-@import 'pages';
-@import 'author';
-@import 'tag';
+@import 'templates'; // Ghost generated body classes
 
 
 // Utility

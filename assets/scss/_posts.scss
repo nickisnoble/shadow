@@ -1,12 +1,8 @@
-.post{
+// Posts
+// =======
+
+.post{ // Class added by Ghost
   margin: kunit(4) 0;
-  @include cf;
-  a{
-    border-bottom: 2px solid $gray;
-    &:hover, &:focus{
-      border-color: $black;
-    }
-  }
 }
 
 .post-title{
