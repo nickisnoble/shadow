@@ -3,6 +3,9 @@
 
 .post{ // Class added by Ghost
   margin: kunit(4) 0;
+  img{
+    margin: kunit(1) auto;
+  }
 }
 
 .post-title{

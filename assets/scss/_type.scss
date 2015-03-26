@@ -36,7 +36,7 @@ a{
 // ----------
 
 %headings{
-  font-family: $sans;w
+  font-family: $sans;
 
   a &{
     color: $black;
@@ -75,10 +75,6 @@ h6{
 
 // Lists
 // -------
-
-ul{
-  list-style-type: square;
-}
 
 ol, ul{
   padding-left: kunit(1);
