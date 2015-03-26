@@ -26,7 +26,7 @@
 
         <aside class="post-meta">
           {{tags}}
-          <p>Written by <a href="{{author.url}}">{{author.name}}</a> on <time class="post-date">{{date format='MMMM DD, YYYY'}}</time></p>
+          <p>Written by {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} on <time class="post-date">{{date format='MMMM DD, YYYY'}}</time></p>
         </aside>
 
       </header>
