@@ -4,14 +4,16 @@
   
   {{#tag}}
   <header class="tag-header">
-    <h1>{{name}}</h1>
     {{#if image}}
-      {{image}}
+      <img src="{{image}}" alt="{{name}} cover image"/>
     {{/if}}
+    <h1>Tag: {{name}}</h1>
     <p class="tag-description">{{description}}</p>
   </header>
   {{/tag}}
   
+  <hr>
+
   {{#foreach posts}}
 
     <article role="article">
@@ -19,7 +21,7 @@
       <header class="post-header">
 
         <a href="{{url}}">
-          <h1 class="post-title">Tag: {{title}}</h1>
+          <h1 class="post-title">{{title}}</h1>
         </a>
 
         <aside class="post-meta">
