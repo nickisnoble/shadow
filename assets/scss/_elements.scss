@@ -9,10 +9,8 @@ img{
 
 hr{
   height: 0;
-  border: 0;
-  border-bottom: 4px solid $gray-light;
-  padding-top: kunit(1);
-  margin: -2px 0;
+  border: 2px solid $gray-light;
+  margin: kunit(2) 0;
 }
 
 embed, iframe, .fluid-width-video-wrapper{
