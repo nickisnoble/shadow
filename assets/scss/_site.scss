@@ -4,6 +4,7 @@
   @media screen and (min-width: $small){
     padding: kunit(4) 0; 
   }
+  
 }
 
 .site-logo{
@@ -23,20 +24,25 @@
   li{
     @include ktype(2,1,1);
     display: block;
+
     @media screen and (min-width: $small){
       display: inline-block;
       + li{
         margin-left: kunit(1);
       }
     }
+
   }
+
 }
 
 .site-footer{
   border-top: 1px solid $gray-light;
   padding: kunit(1) 0;
   margin-top: kunit(1);
+
   .copyright{
     @include ktype(0,0,0);
   }
+
 }
